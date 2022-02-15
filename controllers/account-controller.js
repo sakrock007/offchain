@@ -68,7 +68,8 @@ exports.whiteListAccount = async (req, res, next) => {
 exports.isWhiteListedAccount = async(req, res, next) => {
     try {
         const address = req.query.address;
-        let account = await Accounts.findOne({address: address});
+        // Using regex here to match with the address of user's ( Sometime's it failed due to case mismatch in address of user)
+        let account = await Accounts.findOne({address: { $regex: new RegExp(address), $options: "i" }});
         if(account) {
             var mflag=(new Date().getTime()-new Date(account.timestamp).getTime()>CT_WHITELISTING) || account.whiteListed
             logger.log('info','isWhitelistedAccount returns the Status from DB %s : %s', mflag, address)
