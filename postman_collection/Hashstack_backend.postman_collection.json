@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "4a425218-dfff-4667-af64-3ec94ea39059",
+		"name": "Hashstack backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tokens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tokenPrice?token=0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokenPrice"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pairs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pairs?token1=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&token2=0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pairs"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+						},
+						{
+							"key": "token2",
+							"value": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Wallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/createWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trigger Liquidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/triggerLiquidation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"triggerLiquidation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/priceDepth?symbol=ETHBUSD&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"priceDepth"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "ETHBUSD"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fair Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fairPrice?token1=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&token2=0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56&amount=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fairPrice"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+						},
+						{
+							"key": "token2",
+							"value": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"
+						},
+						{
+							"key": "amount",
+							"value": "1000"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getLoansByAccount?account=0x9324924723874238423828",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getLoansByAccount"
+					],
+					"query": [
+						{
+							"key": "account",
+							"value": "0x9324924723874238423828"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Deposits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getDepositsByAccount?account=0x9324924723874238423828",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getDepositsByAccount"
+					],
+					"query": [
+						{
+							"key": "account",
+							"value": "0x9324924723874238423828"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Liquidations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getLiquidations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getLiquidations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seed Token Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/seedTokenPrice?symbol=Cake",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seedTokenPrice"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "Cake"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getTokenPrice?symbol=Cake",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getTokenPrice"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "Cake"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
